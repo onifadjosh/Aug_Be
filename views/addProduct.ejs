@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+   <h1 class="some"> <%= message %></h1>
+
+    <form action="/products/addProduct" method="post" class="mt-5">
+        <input type="text" placeholder="Product Name" name="prodName">
+        <input type="text" placeholder="Product Price" name="prodPrice">
+        <input type="text" name="prodImage" placeholder="Product Image">
+        <input type="text" name="prodDesc" placeholder="Product Description">
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <a href="/allProduct">go to all users</a>
+
+    
+</body>
+</html>

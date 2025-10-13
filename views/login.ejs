@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+   <h1 class="some"> <%= message %></h1>
+
+    <form action="/login" method="post" class="mt-5">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="password" placeholder="Password">
+
+        <button type="submit">login</button>
+    </form>
+
+
+    <a href="/allUsers">go to all users</a>
+
+    
+</body>
+</html>

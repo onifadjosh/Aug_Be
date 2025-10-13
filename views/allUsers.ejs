@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <% users.forEach((user, index)=> { %>
+    <div class="d-flex gap-3 align-items-center">
+        <h1><%= index+1 %>.</h1>
+        <h1><%= user.firstName %></h1>
+     
+
+        <div class="d-flex">
+           <form action="/users/editUser/<%= user._id %>" >
+               <button class="btn btn-primary">edit</button>
+            </form>
+       
+            <form action="/users/deleteUser/<%= user._id%>" method="post">
+               <button class="btn btn-danger">delete</button>
+            </form>
+        </div>
+    </div>
+    <% }) %>
+    
+</body>
+</html>
